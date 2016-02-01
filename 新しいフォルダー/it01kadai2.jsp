@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" import="java.text.*" %>
-
 <%
 String rename;
 request.setCharacterEncoding("UTF-8");
@@ -43,5 +42,66 @@ if(rename=request.getParameter("nikku")!==null&&rename=request.getParameter("nik
 }
 
 %>
+        <!DOCTYPE html>
+        <html lang="en">
 
+        <head>
+            <meta charset="UTF-8">
+            <title>コメント書き込み</title>
+        </head>
 
+        <body>
+            <h1>
+        <p style="">コメントフォーム</p>
+    </h1>
+            <form method="POST">
+                <font color="#fff">
+            
+                    <table border="0" bordercolor="#000">
+                <tr>
+                    <th bgcolor="#0088ff" align="right">ニックネーム</th>
+                    <th><input type="text" name="nikku" id="" size="10" /></th>
+                </tr>
+                <tr>
+                    <th bgcolor="#0088ff" align="right">コメント</th>
+                    <th><input type="text" name="kome" id="" size="60" /></th>
+                </tr>
+               <tr>
+                    <th><input type="submit" value="登録">
+                    <input type="reset" value="取り消し"></th>
+                </tr>
+            </table>
+            <table border="">
+                <br>
+                <tr bgcolor="#009999">
+                    <th>日付</th>
+                    <th>ニックネーム</th>
+                    <th>コメント</th>
+                </tr>
+                <% 
+                String[] test =new String[1024];
+int 1=0;
+FileReader reader=new FileReader(
+		application.getRealPath("/WEB-INF/data/comments.txt"));
+BufferedReader buf2 = new BufferedReader(reader);
+while(buf2.ready()){
+	test[i]=buf2.readLine();
+	i++;
+}
+buf2.close();
+while(i>0){
+	out.println("<tr style='color:black'>");
+	StringTokenizer yomi=new StringTokenizer(test[i-1],"\t");
+	while(yomi.hasMoreTokens()){
+		out.println("<td>"+yomi.nextToken()+"</td>");	
+	}
+	out.println("</tr>");
+	i--;
+}
+                %>
+            </table>
+        </font>
+            </form>
+        </body>
+
+        </html>
