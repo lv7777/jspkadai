@@ -1,9 +1,9 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8" import="java.io.*,java.util.*,java.text.*" %>
 
 <%
-//String val = new String(request.getParameter("hoge").getBytes("ISO_8859_1"), "UTF-8");
-request.setCharacterEncoding("UTF-8");
-//request.setContentType("UTF-8"); 
+String val = new String(request.getParameter("hoge").getBytes("ISO_8859_1"), "UTF-8");
+//request.setCharacterEncoding("UTF-8");
+request.setContentType("UTF-8"); 
 StringBuilder builder = new StringBuilder();
 FileWriter writer = new FileWriter(application.getRealPath("/WEB-INF/data/comments.txt"),true);
 BufferedWriter buf = new BufferedWriter(writer);
