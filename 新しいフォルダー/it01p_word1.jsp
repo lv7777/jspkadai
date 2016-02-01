@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="p_word2.jsp" method="POST">
+    <form action="it01p_word2.jsp" method="POST">
         <label>検索する単語
             <input type="text" name="keywd" size="20">
         </label>

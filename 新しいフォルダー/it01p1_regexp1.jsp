@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="p1_regexp2.jsp" method="POST">
+    <form action="it01p1_regexp2.jsp" method="POST">
         <label>郵便番号:
             <input type="text" name="postnum" id="" size="20">
         </label>

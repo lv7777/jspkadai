@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <form action="p_addrec2.jsp" method="POST">
+        <form action="it01p_addrec2.jsp" method="POST">
             <div>
                 <label>No:
                     <br />
