@@ -16,5 +16,3 @@
     <input type="submit" value="検索">
 </body>
 </html>
-
-176p
