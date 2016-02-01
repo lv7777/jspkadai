@@ -7,16 +7,11 @@ Date current=cal.getTime();
 SimpleDateFormat dformat=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 StringBuilder builder = new StringBuilder();
 FileWriter writer = new FileWriter(application.getRealPath("/WEB-INF/data/comments.txt"),true);
-
-
-
 BufferedWriter buf = new BufferedWriter(writer);
+if(request.getParameter("nikku")!==null&&
+    rename=request.getParameter("nikku")!==""&&rename=request.getParameter("kome")!==""){
 
-if(rename=request.getParameter("nikku")!==null&&rename=request.getParameter("nikku")!==""&&rename=request.getParameter("kome")!==""){
-	builder.append("\t");
-	builder.append(rename);
-	builder.append("\t");
-
+rename=request.getParameter("nikku");
 	rename = rename.replace("&","&amp;");
 	rename = rename.replace(">","&gt;");
 	rename = rename.replace("<","&lt;");
@@ -52,35 +47,35 @@ if(rename=request.getParameter("nikku")!==null&&rename=request.getParameter("nik
 
         <body>
             <h1>
-        <p style="">コメントフォーム</p>
+        <p style="background-color:#999" style="color:#fff">コメントフォーム</p>
     </h1>
             <form method="POST">
                 <font color="#fff">
-            
                     <table border="0" bordercolor="#000">
                 <tr>
                     <th bgcolor="#0088ff" align="right">ニックネーム</th>
-                    <th><input type="text" name="nikku" id="" size="10" /></th>
+                    <th><input type="text" name="nikku" size="10" /></th>
                 </tr>
                 <tr>
                     <th bgcolor="#0088ff" align="right">コメント</th>
-                    <th><input type="text" name="kome" id="" size="60" /></th>
+                    <th><input type="text" name="kome"size="60" /></th>
                 </tr>
                <tr>
                     <th><input type="submit" value="登録">
                     <input type="reset" value="取り消し"></th>
                 </tr>
-            </table>
-            <table border="">
+                </font>
+            
+            <table border="1">
                 <br>
-                <tr bgcolor="#009999">
+                <tr bgcolor="#009999" align="center" style="color:black">
                     <th>日付</th>
                     <th>ニックネーム</th>
-                    <th>コメント</th>
+                    <th width="500">コメント</th>
                 </tr>
                 <% 
                 String[] test =new String[1024];
-int 1=0;
+int i=0;
 FileReader reader=new FileReader(
 		application.getRealPath("/WEB-INF/data/comments.txt"));
 BufferedReader buf2 = new BufferedReader(reader);
