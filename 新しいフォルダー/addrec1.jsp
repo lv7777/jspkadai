@@ -37,7 +37,7 @@
             <div>
                 <label> TEL:
                     <br>
-                    <input type="text" name="" size="20">
+                    <input type="text" name="tel" size="20">
                 </label>
             </div>
             <div>
