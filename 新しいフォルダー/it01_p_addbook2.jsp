@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" import="" %>
+<% request.setCharacterEncoding("utf-8");%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,19 @@
     <title>アドレス帳検索</title>
 </head>
 <body>
-    <form action="p_addbook2.jsp">
-        <label>
-            検索する名前
-            <input type="text" name="name" size="20">
-            </label>
-    </form>
-    <input type="submit" value="検索">
+    <% %>
+<dl>
+    <dt style="font-size:14pt;font-weight:bold"><%=name %></dt>
+    <dd>
+        <ol>
+            <li><%=sex %></li>
+            <li><%=tell %></li>
+            <li><%=address %></li>
+        </ol>
+    </dd>
+</dl>
+<% }else{ %>
+<div style="color:red">指定された名前は見つからないんですが・・・</div>
 </body>
 </html>
 
