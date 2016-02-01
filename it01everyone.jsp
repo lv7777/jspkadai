@@ -13,7 +13,7 @@ String[] names = { "松岡" ,"薄井", "本多", "川村", "日尾"};
 int i;
 int count = names.length;
 for(i = 0; i < count; i++){
-out.println("<p>こんにちわ、" + names[i] + "さん！</p>");
+out.println("<p>こんにち、" + names[i] + "さん！</p>");
 }
 %>
 </body>
