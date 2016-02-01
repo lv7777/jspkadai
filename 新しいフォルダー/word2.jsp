@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" import="java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +10,22 @@
 
 <body>
     <%
-    
+    HashMap<String, String> map =new HashMap<String, String>();
+    map.put("JSP","をｆじょいｊｆｒぐええふｈりうえｈふえちｇｈり");
+    map.put("JSP","をｆじょいｊｆｒぐええふｈりうえｈふえちｇｈり");
+    map.put("JSP","をｆじょいｊｆｒぐええふｈりうえｈふえちｇｈり");
+    map.put("JSP","をｆじょいｊｆｒぐええふｈりうえｈふえちｇｈり");
+
+    String keywd=request.getParameter(result,"\t");
     %>
 
         <dl>
-            <dt>検索キーワード<% %></dt>
+            <dt>検索キーワード<%=keywd %></dt>
         </dl>
         <dd>
             <ol>
                 <li>
+                    <%=token.nextToken() %>
                     <%=token.nextToken() %>
                 </li>
                 <li>
@@ -27,9 +34,9 @@
             </ol>
 
         </dd>
-        <% %>
+        <% }else{ %>
         <div style="color:red">指定された単語は見つかりませんでした</div>
-        <% %>
+        <% } %>
 </body>
 <div></div>
 </html>
