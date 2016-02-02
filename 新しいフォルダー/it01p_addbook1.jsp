@@ -12,7 +12,7 @@
             検索する名前
             <input type="text" name="name" size="20">
             </label>
-    </form>
     <input type="submit" value="検索">
+    </form>
 </body>
 </html>
