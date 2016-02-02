@@ -41,7 +41,8 @@
             </div>
             <div>
                 <label>住所:
-                    <input type="submit" name="address" size="60">
+                    <br>
+                    <input type="text" name="address" size="60">
                 </label>
             </div>
             <div>
