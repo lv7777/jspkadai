@@ -15,7 +15,7 @@
     		application.getRealPath("WEB-INF/data/data.txt"));
     		BufferedReader buf=new BufferedReader(reader);
    		while(buf.ready()){
-   			String line=buf.readline();
+   			String line=buf.readLine();
    			StringTokenizer token new StringTokenizer(line,"\t");
    			no=token.nextToken();
    			name=token.nextToken();
@@ -35,12 +35,13 @@
     <dd>
         <ol>
             <li><%=sex %></li>
-            <li><%=tell %></li>
+            <li><%=tel %></li>
             <li><%=address %></li>
         </ol>
     </dd>
 </dl>
 <% }else{ %>
 <div style="color:red">指定された名前は見つからないんですが・・・</div>
+<% } %>
 </body>
 </html>
