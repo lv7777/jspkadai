@@ -16,9 +16,13 @@
     map.put("JSP","をｆじょいｊｆｒぐええふｈりうえｈふえちｇｈり");
     map.put("JSP","をｆじょいｊｆｒぐええふｈりうえｈふえちｇｈり");
 
-    String keywd=request.getParameter(result,"\t");
+  String keywd=request.getParameter("keywd");
+    
+    if(map.containsKey(keywd)){
+    
+    String result =map.get(keywd);
+    StringTokenizer token=new StringTokenizer(result,"\t");
     %>
-
         <dl>
             <dt>検索キーワード<%=keywd %></dt>
         </dl>
