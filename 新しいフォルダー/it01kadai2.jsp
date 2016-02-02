@@ -16,7 +16,7 @@ rename=request.getParameter("nikku");
 	rename = rename.replace(">","&gt;");
 	rename = rename.replace("<","&lt;");
 	rename = rename.replace("\"","&quot;");
-	rename = rename.replace("","&acute;");
+	rename = rename.replace(" ","&nbsp;");
 	builder.append(dformat.format(current));
 	builder.append("\t");
 	builder.append(rename);
@@ -27,7 +27,7 @@ rename=request.getParameter("nikku");
 	rename = rename.replace(">","&gt;");
 	rename = rename.replace("<","&lt;");
 	rename = rename.replace("\"","&quot;");
-	rename = rename.replace("","&acute;");
+	rename = rename.replace(" ","&nbsp;");
 	builder.append(rename);
 	builder.append("\t");
 
