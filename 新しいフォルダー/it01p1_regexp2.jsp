@@ -3,7 +3,7 @@
  <%!
  //宣言部の<%は<%!と書く
  private boolean checkPostNumber(String postnum){
-	Pattern pattern=Pattern.compile("^[0-9]{3}\\-[0-9]{4}$",Pattern.CASE_INSTENSIVE);
+	Pattern pattern=Pattern.compile("^[0-9]{3}\\-[0-9]{4}$",Pattarn.CASE_INSENSITIVE);
 	Mather match=pattern.matcher(postnum);
 	return match.find();
  } %>
