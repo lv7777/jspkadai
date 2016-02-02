@@ -2,8 +2,8 @@
 <%
 request.setCharacterEncoding("utf-8");
 StringBuilder builder= new StringBuilder();
-FileWriter application.getRealPath("/WEB-INF/data/data.txt"),true);
-BufferdWriter buf = new BufferdWriter(writer);
+FileWriter writer=new FileWriter(application.getRealPath("/WEB-INF/data/data.txt"),true));
+BufferedWriter buf = new BufferedWriter(writer);
 builder.append(request.getParameter("no"));
 builder.append("\t");
 builder.append(request.getParameter("name"));
@@ -18,5 +18,5 @@ buf.write(builder.toString());
 buf.newLine();
 buf.close()
 
-response.sendRedirect("p_addrec1.jsp");
+response.sendRedirect("it01p_addrec1.jsp");
 %>
